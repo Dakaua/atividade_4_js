@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /***Objetivo:** Escrever uma função que recebe um array de números e retorna a média desses números.
+
+**Detalhes:**
+
+1. A função **`calcularMedia`** recebe um parâmetro **`numeros`**, que é um array de números.
+2. Dentro da função, a soma dos números é calculada usando o método **`reduce()`**.
+3. A média é calculada dividindo a soma pelo número total de elementos no array.
+4. O resultado da média é retornado.
+
+Este exercício demonstra como criar uma função que realiza uma tarefa específica e retorna um resultado.*/
+
+function calcularMedia(numeros) {
+  // Verifica se o array de números está vazio
+  if (numeros.length === 0) {
+    return 0; // Retorna 0 se o array estiver vazio para evitar divisão por zero
+  }
+  
+  // Calcula a soma dos números usando o método reduce()
+  const soma = numeros.reduce((total, num) => total + num, 0);
+  
+  // Calcula a média dividindo a soma pelo número total de elementos no array
+  const media = soma / numeros.length;
+  
+  return media;
+}
+
+// Exemplo de uso:
+const numeros = [10, 20, 30, 40, 50];
+const media = calcularMedia(numeros);
+console.log("A média é:", media); // Saída: A média é: 30
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
